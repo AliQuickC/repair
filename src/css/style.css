@@ -25,6 +25,12 @@ img {
   }
 }
 
+@media (max-width: 320px) {
+  .container {
+    width: 320px;
+  }
+}
+
 .button {
   border-radius: 10px;
   background-color: #ffd200;
@@ -32,11 +38,16 @@ img {
   border: none;
   outline: none;
   cursor: pointer;
+  color: #333333;
 }
 
 /* Импорт стилей шапки */
 .navbar {
-  padding: 8px 0;
+  padding: 4px 0;
+}
+
+.navbar__logo {
+  margin-top: 3px;
 }
 
 .navbar-block {
@@ -71,8 +82,10 @@ img {
           flex-direction: column;
 }
 
-.navbar__button {
-  margin-left: 30px;
+.navbar__adress {
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 2px;
 }
 
 .navbar__phone {
@@ -80,7 +93,16 @@ img {
   font-size: 20px;
   font-weight: 400;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 7px;
+  margin-right: 2px;
+}
+
+.navbar__button {
+  margin-left: 30px;
+  min-width: 170px;
+  min-height: 49px;
+  font-size: 13px;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -92,7 +114,26 @@ img {
     padding: 15px 26px;
   }
   .navbar__logo {
-    width: 90px;
+    width: 91px;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar__button {
+    font-size: 10px;
+    font-weight: 400;
+    max-width: 137px;
+    min-width: 137px;
+    max-height: 39px;
+    min-height: 39px;
+    margin-left: 0;
+    padding: 0;
+    border-radius: 5px;
+    margin-left: 4px;
+  }
+  .navbar-block {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 /*# sourceMappingURL=style.css.map */
