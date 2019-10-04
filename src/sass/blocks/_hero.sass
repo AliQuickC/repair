@@ -1,27 +1,33 @@
 .hero
 	padding: 50px 0
+	background-color: $secondary
 	&-block
 		display: flex
 		justify-content: space-between
+		align-items: flex-start
 	&-image	
 		min-width: 270px	
+		max-height: 491px
 		flex-basis: 49%
-		box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05)		
+		box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05)	
+		margin-top: -2px
+		// margin-bottom: 52px
+
 	&-text
 		flex-basis: 45%
 		padding-right: 10px
 		&__title
-			font-size: 41px			
+			font-size: 42px			
 			line-height: 55px
 			margin-left: -4px
+			margin-top: 29px
 			margin-bottom: 38px
-			letter-spacing: -1px
+			letter-spacing: -0.6px
 			+bold			
 		&__subtitle
 			display: inline-block
 			font-size: 20px			
-			margin-bottom: 65px
-			letter-spacing: -0.4px
+			margin-bottom: 65px			
 			+bold
 
 	&-list
@@ -32,7 +38,10 @@
 			align-items: center		
 			align-content: center	
 			margin-bottom: 22px		
-			min-height: 48px	
+			min-height: 48px
+			&:last-child
+				margin-bottom: 0
+			
 		&__image			
 			width: 36px			
 			height: 36px
@@ -47,14 +56,12 @@
 			margin-right: 30px
 		&__text		
 			font-size: 14px
-			line-height: 24px
-			// line-height: 1.3
+			line-height: 24px			
 			max-width: 300px
-
 @media(max-width: 1200px)
 	.hero	
-		&-list
-			margin-bottom: 44px
+		&-image	
+			max-height: 319px					
 		&-text
 			padding-right: 10px
 			padding-left: 10px
@@ -65,19 +72,26 @@
 
 @media(max-width: 992px)		
 	.hero
+		&-image	
+			max-height: 491px
 		&-block		
 			flex-direction: column	
+		&-text
+			margin-bottom: 36px	
 
 @media(max-width: 768px)			
 	.hero
-		padding: 32px 0
+		padding: 52px 0
+		&-image	
+			max-height: 478px
 		&-block		
-			flex-direction: column	
+			flex-direction: column
+			flex-wrap: wrap
 			padding-left: 12px
-			padding-right: 12px	
+			padding-right: 10px	
 		&-text				
 			&__title
-				font-size: 23px
+				font-size: 24px
 				line-height: 1.4	
 				margin-left: 4px			
 				margin-bottom: 12px
@@ -94,17 +108,21 @@
 
 @media(max-width: 576px)		
 	.hero	
+		&-image	
+			max-height: 231px
+			margin-left: -1px
 		&-text
+			margin-bottom: 24px
 			&__title
-				line-height: 1.25
+				line-height: 1.24
 				letter-spacing: 0px
-				margin-top: 20px
-				margin-bottom: 8px
+				margin-top: 19px
+				margin-bottom: 7px
 			&__subtitle
 				margin-bottom: 24px
+				line-height: 1.2
 		&-list				
-			margin-left: 3px
-			margin-bottom: 32px
+			margin-left: 3px			
 			&__image
 				width: 36px
 				height: 36px
