@@ -1,0 +1,117 @@
+.offer
+	background: url('../img/offer/offer-bg.jpg') no-repeat
+	background-position: center right
+	background-size: contain
+	position: relative
+	padding-top: 58px
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 50%
+		height: 100%
+		background-color: #ffffff
+	&-block
+		width: 50%
+		padding-right: 90px
+		position: relative
+	&__title
+		max-width: 360px
+		line-height: 35px
+		margin-bottom: 20px
+	&__subtitle
+		max-width: 250px
+		margin-bottom: 32px
+	&__input
+		margin-bottom: 30px
+		width: 240px
+		&:first-child
+			margin-right: 10px
+			padding-left: 24px
+		&:last-of-type
+			padding-left: 31px
+	&__button
+		width: 100%
+		min-height: 70px
+		margin-bottom: 11px
+	&__communication
+		display: flex
+		justify-content: space-between
+	&__ourmanager			
+		flex-basis: 49%
+		line-height: 24px
+		letter-spacing: -0.6px
+		margin-left: -1px		
+	&__phone				
+		color: $tex-color
+		text-decoration: none
+		+bold
+	&__text	
+		flex-basis: 49%
+		line-height: 25px	
+		letter-spacing: -0.45px
+		margin-top: 13px	
+		padding-left: 42px	
+		
+		
+	
+@media(max-width: 1200px)		
+	.offer
+		background-size: cover
+		&__input
+			width: 100%
+			margin-bottom: 10px
+		&__button
+			font-size: 13px
+		&__communication			
+			flex-direction: column
+		&__text	
+			padding-left: 0
+@media(max-width: 768px)			
+	.offer
+		background: #fff
+		&-block
+			width: 100%
+			padding-right: 0
+@media(max-width: 576px)	
+	.offer
+		&__title
+			font-size: 18px
+			font-weight: 400
+			max-width: 262px
+			line-height: 22px			
+			margin-bottom: 16px		
+		&__subtitle
+			letter-spacing: -1px
+			margin-bottom: 25px
+		&__form *		
+			padding-left: 1px
+			max-width: 275px
+		&__input
+			padding-top: 23px
+			padding-bottom: 23px
+			margin-right: 0	
+			&:first-child
+				margin-bottom: 8px
+				padding-left: 21px
+			&:last-of-type
+				padding-left: 21px
+				margin-bottom: 8px
+		&__button		
+			padding-left: 45px
+			padding-right: 45px
+			font-size: 14px			
+			line-height: 18px
+			+bold			
+			margin-bottom: 4px
+		&__communication
+			padding-left: 7px
+		
+		&__ourmanager					
+			margin-bottom: 6px
+		&__text
+			margin-top: 0
+			margin-left: -2px
+		
+
