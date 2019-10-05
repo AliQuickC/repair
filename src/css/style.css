@@ -91,6 +91,11 @@ img {
   border-radius: 10px;
 }
 
+.input:focus {
+  outline: none;
+  border-color: orange;
+}
+
 /* Импорт стилей шапки */
 .navbar {
   padding: 4px 0;
