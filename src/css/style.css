@@ -96,6 +96,25 @@ img {
   border-color: orange;
 }
 
+.button-up {
+  position: fixed;
+  z-index: 5;
+  bottom: 1%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 0;
+  min-width: 190px;
+  min-height: 30px;
+  font-size: 12px;
+  background-color: rgba(255, 210, 0, 0.5);
+  display: none;
+}
+
+.button-up span {
+  font-size: 18px;
+}
+
 /* Импорт стилей шапки */
 .navbar {
   padding: 4px 0;
@@ -582,6 +601,145 @@ img {
   .offer__text {
     margin-top: 0;
     margin-left: -2px;
+  }
+}
+
+/* Стили модального окна */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #333333;
+  display: none;
+}
+
+.modal_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-dialog {
+  position: relative;
+  margin: auto;
+  min-width: 570px;
+  height: 674px;
+  background-color: #fff;
+  padding: 40px;
+}
+
+.modal-dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 0 0 10px;
+  padding: 5px 10px;
+}
+
+.modal-dialog__title {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  margin-top: 32px;
+  margin-bottom: 36px;
+  margin-left: 10px;
+}
+
+.modal-dialog__subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 35px;
+  margin-left: 8px;
+  margin-bottom: 42px;
+}
+
+.modal-dialog__form {
+  min-width: 370px;
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 29px;
+}
+
+.modal-dialog__input {
+  height: 65px;
+  padding-left: 25px;
+}
+
+.modal-dialog__input:first-child {
+  margin-bottom: 15px;
+}
+
+.modal-dialog__input:last-of-type {
+  margin-bottom: 30px;
+}
+
+.modal-dialog__input {
+  width: 100%;
+}
+
+.modal-dialog__button {
+  width: 366px;
+  height: 70px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.modal-dialog__text {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.modal-dialog__phone {
+  display: inline-block;
+  color: #333333;
+  text-decoration: none;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 12px;
+  letter-spacing: -0.6px;
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    min-width: 320px;
+    height: 600px;
+    padding: 0;
+  }
+  .modal-dialog__subtitle {
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .modal-dialog__form {
+    min-width: 300px;
+  }
+  .modal-dialog__input {
+    width: 90%;
+  }
+  .modal-dialog__button {
+    width: 90%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

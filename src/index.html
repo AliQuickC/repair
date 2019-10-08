@@ -26,7 +26,7 @@
 						</a>
 					</div>
 					<!-- /.navbar__contacts -->
-					<button class="button navbar__button">Перезвоните мне</button>
+					<button class="button navbar__button" id="button">Перезвоните мне</button>
 				</div>
 				<!-- /.navbar__info -->
 			</div>
@@ -103,9 +103,9 @@
 					<div class="offer__communication">
 						<p class="offer__ourmanager">Наш менеджер перезвонит Вам<br> в течение 60 секунд</p>
 						<!-- <div class="offer__call"> -->
-							<p class="offer__text">или перезвоните нам сами<br>
-								<a class="offer__phone" href="tel:+7(495)42-251-31">+7 (495) 42-251-31</a>
-							</p>
+						<p class="offer__text">или перезвоните нам сами<br>
+							<a class="offer__phone" href="tel:+7(495)42-251-31">+7 (495) 42-251-31</a>
+						</p>
 						<!-- </div> -->
 					</div>
 					<!-- /.offer__communication -->
@@ -116,6 +116,39 @@
 		</section>
 		<!-- /.offer -->
 	</main>
+
+
+	<div class="modal" id="modal">
+		<div class="modal-dialog">
+			<button class="modal-dialog__close button" id="close">&times;</button>
+			<h4 class="modal-dialog__title">Узнайте точную стоимость <br>
+				ремонта по телефону!</h4>
+			<p class="modal-dialog__subtitle">Заполните поля ниже - мы свяжемся с Вами</p>
+			<form action="#" class="form modal-dialog__form">
+					<input type="text" class="input modal-dialog__input" placeholder="Ваше имя">
+					<input type="tel" class="input modal-dialog__input" placeholder="Ваш телефон">
+					<button class="button modal-dialog__button">Узнать стоимость</button>
+			</form>			
+			<p class="modal-dialog__text">Или Вы можете перезвонить нам сами<br>
+					по телефону:	<br>				
+				<a class="modal-dialog__phone" href="tel:+7 (8182) 42-51-31">+7 (8182) 42-51-31</a>
+			</p>
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<button class="button-up button" id="button-up">
+		<span>&#8593;</span> Переместиться наверх <span>&#8593;</span>
+	</button>
+
+	<!-- <script src="./js/main.js"></script> -->
+
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+	<script src="./js/jq-script.js"></script>
 
 </body>
 

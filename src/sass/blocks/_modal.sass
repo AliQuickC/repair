@@ -1,0 +1,96 @@
+.modal
+	position: fixed
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	background-color: rgba(#000, 0.5)
+	text-align: center
+	color: $tex-color
+	display: none
+	&_active
+		display: flex
+	&-dialog
+		position: relative
+		margin: auto
+		min-width: 570px
+		height: 674px
+		// width: 90%
+		// min-width: 200px
+		background-color: #fff
+		padding: 40px
+		&__close
+			position: absolute
+			top: 0
+			right: 0		
+			border-radius: 0 0 0 10px
+			padding: 5px 10px
+
+		&__title	
+			font-size: 22px
+			font-weight: 400
+			line-height: 33px
+			+bold
+			margin-top: 32px
+			margin-bottom: 36px
+			margin-left: 10px
+		&__subtitle
+			font-size: 16px
+			font-weight: 400
+			line-height: 35px
+			margin-left: 8px
+			margin-bottom: 42px
+		&__form	
+			min-width: 370px
+			max-width: 370px
+			margin-left: auto
+			margin-right: auto
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin-bottom: 29px
+		&__input		
+			height: 65px
+			padding-left: 25px
+			&:first-child
+				margin-bottom: 15px
+			&:last-of-type
+				margin-bottom: 30px
+		&__input
+			width: 100%
+		&__button
+			width: 366px
+			height: 70px
+			align-self: flex-end
+		&__text				
+			font-size: 15px
+			line-height: 20px
+
+		&__phone	
+			display: inline-block
+			color: $tex-color
+			text-decoration: none
+			+bold
+			font-size: 25px
+			font-weight: 400
+			margin-top: 12px
+			letter-spacing: -0.6px
+
+@media(max-width: 768px)	
+	.modal
+		&-dialog
+			min-width: 320px
+			height: 600px
+			padding: 0
+			&__subtitle
+				max-width: 200px
+				margin-left: auto
+				margin-right: auto
+			&__form	
+				min-width: 300px			
+			&__input
+				width: 90%
+			&__button
+				width: 90%	
+				align-self: center
+
