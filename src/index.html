@@ -6,8 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-
 	<link rel="stylesheet" href="./css/normalize.css">
+
+	<link rel="stylesheet" href="./css/slick.css">
+
+	<!-- <link rel="stylesheet" href="./css/owl.carousel.min.css">
+	<link rel="stylesheet" href="./css/owl.theme.default.min.css"> -->
+
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -125,18 +130,46 @@
 				ремонта по телефону!</h4>
 			<p class="modal-dialog__subtitle">Заполните поля ниже - мы свяжемся с Вами</p>
 			<form action="#" class="form modal-dialog__form">
-					<input type="text" class="input modal-dialog__input" placeholder="Ваше имя">
-					<input type="tel" class="input modal-dialog__input" placeholder="Ваш телефон">
-					<button class="button modal-dialog__button">Узнать стоимость</button>
-			</form>			
+				<input type="text" class="input modal-dialog__input" placeholder="Ваше имя">
+				<input type="tel" class="input modal-dialog__input" placeholder="Ваш телефон">
+				<button class="button modal-dialog__button">Узнать стоимость</button>
+			</form>
 			<p class="modal-dialog__text">Или Вы можете перезвонить нам сами<br>
-					по телефону:	<br>				
-				<a class="modal-dialog__phone" href="tel:+7 (8182) 42-51-31">+7 (8182) 42-51-31</a>
+				по телефону: <br>
+				<a class="modal-dialog__phone" href="tel:+7-8182-42-51-31">+7 (8182) 42-51-31</a>
 			</p>
 		</div>
 		<!-- /.modal-dialog -->
 	</div>
 	<!-- /.modal -->
+
+	<section class="section portfolio">
+		<div class="container">
+			<h2 class="section-title portfolio__title">Работая с 2007 года,<br> мы сделали более 500 <br class="line_break">
+				ремонтов в квартирах и домах
+			</h2>
+			<div class="owl-carousel slider">
+				<div class="slider__item"><img class="slider__image" src="./img/portfolio/slider-1.jpg" alt=""></div>
+				<div class="slider__item"><img class="slider__image" src="./img/portfolio/slider-2.jpg" alt=""></div>
+				<div class="slider__item"><img class="slider__image" src="./img/portfolio/slider-3.jpg" alt=""></div>
+				<div class="slider__item"><img class="slider__image" src="./img/portfolio/slider-1.jpg" alt=""></div>
+				<div class="slider__item"><img class="slider__image" src="./img/portfolio/slider-2.jpg" alt=""></div>
+				<div class="slider__item"><img class="slider__image" src="./img/portfolio/slider-3.jpg" alt=""></div>
+			</div>
+
+			<div class="arrows portfolio__arrows">
+				<div class="arrows__left">
+					<img src="./img/portfolio/left-arrow.png" alt="">
+				</div>
+				<div class="arrows__right">
+					<img src="./img/portfolio/right-arrow.png" alt="">
+				</div>
+			</div>
+			
+		</div>
+		<!-- /.container -->
+	</section>
+	<!-- /.srction portfolio -->
 
 	<button class="button-up button" id="button-up">
 		<span>&#8593;</span> Переместиться наверх <span>&#8593;</span>
@@ -144,11 +177,70 @@
 
 	<!-- <script src="./js/main.js"></script> -->
 
-	<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-	crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="./js/jq-script.js"></script>
+
+	<script src="./js/slick.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.slider').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				centerMode: true,				
+				centerPadding: '0px',
+				// variableWidth: true,
+				prevArrow: $('.arrows__left'),
+				nextArrow: $('.arrows__right'),
+				responsive: [
+					{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1
+						}
+					},	
+					{
+					breakpoint: 770,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+						}
+					}
+				]
+			});
+		});
+	</script>
+
+
+	<!-- <script src="./js/owl.carousel.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".owl-carousel").owlCarousel({
+				loop: true,
+				margin: 30,
+				nav: true,
+				navigation: true,
+				// navText : ["Предыдущий слайд",	"Следующий слайд"]
+				navText: ["<img src=\"./img/portfolio/left-arrow.png\">",
+					"<img src=\"./img/portfolio/right-arrow.png\">"],
+				responsive: {
+					0: {
+						items: 1,
+						center:true
+					},
+					770: {
+						items: 2
+					},
+					1200: {
+						items: 3
+					}
+				}
+
+
+			});
+		});
+	</script> -->
 
 </body>
 
