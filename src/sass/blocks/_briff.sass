@@ -1,0 +1,43 @@
+.brif
+	background-image: url('../img/brif/brif-color-bg.png'), url('../img/brif/brif-bg.jpg')
+	background-position: left center, center right
+	background-size: 50%, contain
+	background-repeat: repeat-y, no-repeat
+	&-block
+		display: flex
+	&__interview
+		flex-basis: 50%
+	&__form
+		flex-basis: 50%
+		padding-left: 200px
+		text-align: center
+
+.interview
+	padding-right: 70px
+	&__title
+		margin-bottom: 50px
+		font-size: 22px
+		+bold
+	&__subtitle
+		display: block
+		margin-bottom: 95px
+		font-size: 16px
+	&-list
+		list-style: none
+		&__item
+			display: flex
+			align-items: center
+			margin-bottom: 25px
+			+bold
+		&__counter
+			display: inline-block
+			margin-right: 30px
+			text-align: center
+			line-height: 35px
+			font-size: 14px
+			width: 35px
+			height: 35px
+			border: 2px solid $text-color
+			border-radius: 50%
+		&__text
+			max-width: 400px
