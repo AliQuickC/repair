@@ -1,13 +1,12 @@
 .portfolio
 	background: $secondary url('../img/portfolio/portfolio-pattern.jpg') center left repeat-y		
 	padding-top: 92px
-	padding-bottom: 100px
+	padding-bottom: 80px
 	background-size: 50%
 	&__title		
 		margin: auto		
 		margin-bottom: 93px
-		font-size: 30px
-		font-weight: 400
+		font-size: 30px		
 		line-height: 45px		
 	&__arrows
 		width: 120px
@@ -29,30 +28,23 @@
 		margin-left: 15px
 		outline: none
 	
-
-.line_break
-	display: none
-
 .slider
 	// margin: 0 -15px	//для slick slider
 .slick-slide
 	padding: 0 15px
 	outline: none
 
-@media(max-width: 1200px)	
-	.line_break
-		display: inline
-
 @media(max-width: 768px)
 	.portfolio
 		background: $secondary
+		padding-bottom: 42px
 		.slider
 			margin: 0 auto
 			transform: translateX(-2px)
 			padding: 0
 			width: 246px
 			&__item
-				padding: 0			
+				padding: 0							
 
 	.slider
 		&__item	

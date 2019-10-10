@@ -10,13 +10,22 @@ img
 	width: 1170px
 	margin: auto
 
+.line_break1200, .line_break768	
+	display: none
+
+
 @media(max-width: 1200px)
 	.container
 		width: 760px
+	.line_break1200
+		display: inline		
+
 @media(max-width: 768px)
 	.container
 		width: 90%
-		max-width: 580px		
+		max-width: 580px	
+	.line_break768
+		display: inline			
 @media(max-width: 576px)				
 	.container
 		width: 320px		
@@ -28,7 +37,7 @@ img
 	border: none
 	outline: none
 	cursor: pointer
-	color: $tex-color
+	color: $text-color
 	+bold
 	&:hover
 		background-color: lighten($main-color, 10%)

@@ -1,0 +1,104 @@
+.step
+	flex-basis: 20%
+	text-align: center
+	position: relative
+	&:after
+		content: ''
+		width: 73px
+		height: 25px
+		position: absolute
+		background: url('../img/steps/arrow.png') no-repeat center
+		top: -11px
+		right: -15.5%
+	&:last-child
+		&:after
+			display: none
+	&__image
+		width: 100px
+		height: 100px
+		border: 3px solid $main-color
+		display: flex
+		justify-content: center
+		align-items: center
+		margin: auto
+		border-radius: 50%
+		margin-bottom: 27px
+	&:nth-child(1)
+		img
+			margin-top: -2px
+	&:nth-child(2)
+		img
+			margin-top: -1px
+	&:nth-child(3)
+		img
+			margin-right: 2px
+	&:nth-child(4)
+		img
+			margin-top: -1px
+	&:nth-child(5)
+		img
+			margin-left: 3px
+	
+
+	&__text
+		font-size: 14px
+		max-width: 160px
+		margin: auto
+		line-height: 20px
+	&s
+		padding-top: 32px
+		&__title
+			margin: auto
+			max-width: 670px
+			margin-bottom: 38px
+			font-size: 30px
+			line-height: 45px
+		&__subtitle	
+			text-align: center
+			margin-bottom: 58px
+			font-size: 20px
+			line-height: 45px
+			letter-spacing: -0.2px
+		&-block
+			display: flex
+			flex-wrap: wrap
+
+@media(max-width: 1200px)
+	.step
+		margin-bottom: 30px
+		flex-basis: 50%
+		&:after
+			display: none		
+		&s
+			&-block
+				justify-content: center
+
+@media(max-width: 768px)
+	.step
+		margin-bottom: 28px
+		margin-left: -2px		
+		&:after
+			display: none		
+		&__text
+			font-size: 12px
+			line-height: 16px	
+		&:nth-child(1)
+			.step__image
+				margin-bottom: 20px			
+		&:nth-child(2)
+			.step__image
+				margin-bottom: 30px				
+		&s
+			padding-top: 22px
+			&__title
+				font-size: 18px
+				line-height: 21px	
+				margin-bottom: 10px
+				margin-left: -7px
+			&__subtitle
+				font-size: 14px		
+				margin-bottom: 20px		
+				margin-left: -5px
+			&-block
+				flex-direction: column
+				justify-content: flex-start	
