@@ -34,8 +34,54 @@ img {
   margin: auto;
 }
 
+.line_break-off {
+  display: inline;
+}
+
 .line_break1200, .line_break768 {
   display: none;
+}
+
+.text_bold {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.text_bold a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.input {
+  border: 1px solid #dddddd;
+}
+
+.input:focus {
+  outline: none;
+  border-color: orange;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input.invalid {
+  border: 1px solid red;
+}
+
+.modal-dialog__form div.invalid {
+  bottom: 30px;
+}
+
+div.invalid {
+  font-size: 16px;
+  width: 100%;
+  color: red;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  text-align: center;
 }
 
 @media (max-width: 1200px) {
@@ -55,11 +101,17 @@ img {
   .line_break768 {
     display: inline;
   }
+  .line_break-off {
+    display: none;
+  }
 }
 
 @media (max-width: 576px) {
   .container {
     width: 320px;
+  }
+  div.invalid {
+    font-size: 12px;
   }
 }
 
@@ -96,15 +148,9 @@ img {
 }
 
 .input {
-  border: 1px solid #dddddd;
   padding: 22px 22px;
   font-size: 15px;
   border-radius: 10px;
-}
-
-.input:focus {
-  outline: none;
-  border-color: orange;
 }
 
 .button-up {
@@ -478,11 +524,19 @@ img {
 
 .offer__input {
   margin-bottom: 30px;
-  width: 240px;
+  min-width: 240px;
+}
+
+.offer__input-group {
+  display: inline-block;
+  max-width: 240px;
+}
+
+.offer__input-group:first-child {
+  margin-right: 10px;
 }
 
 .offer__input:first-child {
-  margin-right: 10px;
   padding-left: 24px;
 }
 
@@ -529,6 +583,10 @@ img {
   padding-left: 42px;
 }
 
+.offer__input-group div.invalid {
+  bottom: 30px;
+}
+
 @media (max-width: 1200px) {
   .offer {
     background-size: cover;
@@ -536,6 +594,9 @@ img {
   .offer__input {
     width: 100%;
     margin-bottom: 10px;
+  }
+  .offer__input-group {
+    max-width: 100%;
   }
   .offer__button {
     font-size: 13px;
@@ -548,6 +609,9 @@ img {
   }
   .offer__text {
     padding-left: 0;
+  }
+  .offer__input-group div.invalid {
+    bottom: 15px;
   }
 }
 
@@ -876,6 +940,7 @@ img {
       flex-basis: 20%;
   text-align: center;
   position: relative;
+  padding-bottom: 4px;
 }
 
 .step:after {
@@ -1001,6 +1066,7 @@ img {
   }
   .steps {
     padding-top: 22px;
+    padding-bottom: 44px;
   }
   .steps__title {
     font-size: 18px;
@@ -1028,7 +1094,7 @@ img {
 .brif {
   background-image: url("../img/brif/brif-color-bg.png"), url("../img/brif/brif-bg.jpg");
   background-position: left center, center right;
-  background-size: 50%, contain;
+  background-size: 50.1%, cover;
   background-repeat: repeat-y, no-repeat;
 }
 
@@ -1046,29 +1112,45 @@ img {
 .brif__form {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  padding-left: 200px;
+  padding-left: 214px;
   text-align: center;
 }
 
-.interview {
-  padding-right: 70px;
+.brif__input {
+  width: 100%;
+  width: 100%;
+  max-width: 370px;
+  height: 65px;
+  margin-bottom: 15px;
+}
+
+.brif__button {
+  height: 70px;
+  width: 100%;
+  max-width: 370px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 .interview__title {
-  margin-bottom: 50px;
+  margin-top: 9px;
+  margin-bottom: 44px;
   font-size: 22px;
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
+  line-height: 33px;
 }
 
 .interview__subtitle {
   display: block;
-  margin-bottom: 95px;
+  margin-bottom: 92px;
   font-size: 16px;
+  margin-left: 2px;
 }
 
 .interview-list {
   list-style: none;
+  padding-left: 1px;
 }
 
 .interview-list__item {
@@ -1078,14 +1160,43 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
 }
 
+.interview-list__item:nth-child(1) {
+  margin-bottom: 26px;
+}
+
+.interview-list__item:nth-child(1) .interview-list__text {
+  margin-top: -2px;
+}
+
+.interview-list__item:nth-child(2) {
+  margin-bottom: 18px;
+}
+
+.interview-list__item:nth-child(3) {
+  margin-bottom: 32px;
+}
+
+.interview-list__item:nth-child(3) .interview-list__text {
+  margin-top: 15px;
+  line-height: 22px;
+}
+
 .interview-list__counter {
-  display: inline-block;
-  margin-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 32px;
   text-align: center;
   line-height: 35px;
   font-size: 14px;
@@ -1096,7 +1207,531 @@ img {
 }
 
 .interview-list__text {
+  font-size: 18px;
   max-width: 400px;
+  letter-spacing: -0.2px;
+}
+
+.form__title {
+  margin-top: 5px;
+  margin-bottom: 45px;
+  letter-spacing: -1.05px;
+  margin-left: 2px;
+  font-size: 24px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  line-height: 33px;
+}
+
+.form__subtitle {
+  display: block;
+  margin-bottom: 50px;
+  font-size: 16px;
+}
+
+.form__description {
+  display: block;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+@media (max-width: 1200px) {
+  .brif__form {
+    padding-left: 30px;
+  }
+  .interview {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .interview__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .interview__subtitle {
+    margin-bottom: 30px;
+  }
+  .interview-list__text {
+    font-style: 14px;
+    max-width: 200px;
+  }
+  .interview-list__counter {
+    margin-right: 20px;
+  }
+  .form__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .form__subtitle {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brif {
+    background-image: url("../img/brif/brif-color-bg.png"), url("../img/brif/brif-bg.jpg");
+    background-position: top center, center bottom;
+    background-repeat: repeat-x, no-repeat;
+    background-size: 100% 44.7%, cover;
+    padding-top: 33px;
+    padding-bottom: 30px;
+  }
+  .brif-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .brif__form {
+    margin-top: 94px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .brif__input {
+    max-width: 275px;
+    margin-bottom: 8px;
+  }
+  .brif__button {
+    max-width: 275px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+  .interview {
+    padding-left: 21px;
+  }
+  .interview__title {
+    line-height: 22px;
+    letter-spacing: -1.11px;
+    margin-bottom: 13px;
+  }
+  .interview__subtitle {
+    max-width: 180px;
+    letter-spacing: -1px;
+    line-height: 16px;
+    margin-bottom: 38px;
+  }
+  .interview-list__counter {
+    margin-right: 10px;
+    padding-left: 3px;
+  }
+  .interview-list__text {
+    font-size: 14px;
+    max-width: 240px;
+  }
+  .interview-list__item {
+    margin-left: -2px;
+  }
+  .interview-list__item:nth-child(1) {
+    margin-bottom: 22px;
+  }
+  .interview-list__item:nth-child(1) .interview-list__text {
+    margin-top: 2px;
+  }
+  .interview-list__item:nth-child(2) {
+    margin-bottom: 19px;
+  }
+  .interview-list__item:nth-child(2) .interview-list__text {
+    margin-top: 10px;
+  }
+  .interview-list__item:nth-child(3) {
+    margin-bottom: 24px;
+  }
+  .interview-list__item:nth-child(3) .interview-list__text {
+    line-height: 16px;
+    margin-top: 2px;
+  }
+  .form__title {
+    line-height: 24px;
+    margin-left: -3px;
+    margin-bottom: 24px;
+    letter-spacing: -1.1px;
+  }
+  .form__title span {
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .form__subtitle {
+    letter-spacing: -1.1px;
+    margin-bottom: 33px;
+  }
+  .form__description {
+    max-width: 140px;
+    line-height: 24px;
+    letter-spacing: -1.1px;
+    margin: auto;
+    -webkit-transform: translateX(-4px);
+            transform: translateX(-4px);
+  }
+}
+
+/* Стили для подвала сайта*/
+.warranty {
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 226px;
+}
+
+.warranty-header {
+  background-color: #ffc000;
+  min-height: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.warranty-title {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 50px;
+  margin-top: 22px;
+}
+
+.warranty-title span {
+  margin-left: -9px;
+}
+
+.advantage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 103px;
+}
+
+.advantage-item {
+  max-width: 370px;
+  min-width: 370px;
+  max-height: 410px;
+  min-height: 410px;
+}
+
+.advantage-item:nth-child(1) {
+  background: #f7f7f7 url("../img/warranty/advantage1.png") bottom center no-repeat;
+  background-size: contain;
+}
+
+.advantage-item:nth-child(2) {
+  background: #f7f7f7 url("../img/warranty/advantage2.png") bottom center no-repeat;
+  background-size: contain;
+}
+
+.advantage-item:nth-child(3) {
+  background: #f7f7f7 url("../img/warranty/advantage3.png") bottom center no-repeat;
+  background-size: contain;
+}
+
+.advantage-item__text {
+  font-size: 16px;
+  line-height: 23px;
+  text-align: left;
+  padding-left: 26px;
+  padding-top: 6px;
+}
+
+.advantage-item__bold {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.contract-title {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 45px;
+  margin-bottom: 92px;
+}
+
+.contract-item {
+  min-width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contract-item:nth-child(2) {
+  margin-left: 28px;
+  margin-right: 28px;
+}
+
+.contract-item__image {
+  max-width: 270px;
+  min-width: 270px;
+  max-height: 360px;
+  min-height: 360px;
+  background-color: #f5f5f5;
+  margin-bottom: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contract-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contract-item__text {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media (max-width: 1200px) {
+  .advantage {
+    padding-top: 59px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .advantage-item {
+    margin-bottom: 31px;
+  }
+  .warranty {
+    padding-bottom: 100px;
+  }
+  .warranty-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contract-title {
+    font-size: 22px;
+    margin-bottom: 46px;
+  }
+  .contract-item {
+    min-width: 270px;
+    margin-bottom: 44px;
+  }
+  .contract-items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contract-item__image {
+    margin-bottom: 29px;
+  }
+  .contract-item:nth-child(2) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .contract-item__text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .warranty {
+    padding-bottom: 43px;
+  }
+  .warranty-title {
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 10px;
+  }
+  .warranty-title span {
+    margin-left: 0;
+  }
+  .warranty-header {
+    min-height: 231px;
+  }
+  .advantage {
+    padding-bottom: 24px;
+  }
+  .advantage-item {
+    min-width: 272px;
+    min-height: 300px;
+  }
+  .advantage-item:nth-child(2) {
+    min-height: 307px;
+    min-width: 277px;
+    margin-left: -2px;
+    margin-bottom: 28px;
+  }
+  .advantage-item:nth-child(2) .advantage-item__text {
+    padding-left: 25px;
+  }
+  .advantage-item:nth-child(3) {
+    min-height: 304px;
+    min-width: 275px;
+    margin-left: -4px;
+  }
+  .advantage-item__text {
+    padding-top: 5px;
+    font-size: 12px;
+    line-height: 17.05px;
+    padding-left: 19px;
+  }
+  .contract-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .contract-item:nth-child(2) {
+    margin-bottom: 43px;
+  }
+  .contract-item:nth-child(2) .contract-item__image {
+    margin-bottom: 28px;
+  }
+  .contract-item:nth-child(3) .contract-item__image {
+    margin-bottom: 28px;
+  }
+}
+
+/* Стили для подвала сайта*/
+.footer {
+  position: relative;
+  color: #000000;
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.contacts {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-top: 69px;
+  padding-bottom: 110px;
+  padding-left: 210px;
+}
+
+.contacts-title {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 95px;
+  margin-left: 3px;
+}
+
+.contacts-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contacts-list {
+  padding: 0;
+  list-style: none;
+}
+
+.contacts-list__icon {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 23px;
+}
+
+.contacts-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contacts-list__item:nth-child(1) {
+  margin-bottom: 36px;
+}
+
+.contacts-list__item:nth-child(2) {
+  margin-bottom: 34px;
+}
+
+.contacts-list__item:nth-child(3) .contacts-list__text {
+  margin-left: 1px;
+}
+
+.contacts-list__text {
+  line-height: 26px;
+  margin-top: -6px;
+}
+
+@media (max-width: 1200px) {
+  .contacts {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    min-height: 1122px;
+  }
+  .contacts {
+    padding-top: 46px;
+    padding-left: 22px;
+  }
+  .contacts-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .contacts-title {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 37px;
+  }
+  .contacts-list__icon {
+    margin-right: 12px;
+  }
+  .contacts-list__item:nth-child(2) .contacts-list__text {
+    margin-left: 1px;
+  }
+  .contacts-list__item:nth-child(3) .contacts-list__text {
+    margin-left: 2px;
+  }
+  .map {
+    top: 457px;
+    width: 100%;
+    height: 665px;
+  }
 }
 
 /* Стили модального окна */
@@ -1208,7 +1843,6 @@ img {
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
   font-size: 25px;
-  font-weight: 400;
   margin-top: 12px;
   letter-spacing: -0.6px;
 }
@@ -1219,13 +1853,18 @@ img {
     height: 600px;
     padding: 0;
   }
+  .modal-dialog__title {
+    margin-bottom: 0;
+  }
   .modal-dialog__subtitle {
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 20px;
   }
   .modal-dialog__form {
     min-width: 300px;
+    padding-right: 0;
   }
   .modal-dialog__input {
     width: 90%;

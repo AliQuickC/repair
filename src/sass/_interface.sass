@@ -10,9 +10,42 @@ img
 	width: 1170px
 	margin: auto
 
+.line_break-off 
+	display: inline
+
 .line_break1200, .line_break768	
 	display: none
 
+.text_bold	
+	+bold
+.text_bold a	
+	color: #000000
+	text-decoration: none
+	
+
+.input
+	border: 1px solid $border-input
+	&:focus
+		outline: none
+		border-color: orange
+	&-group		
+		position: relative
+		width: 100%
+
+.input.invalid
+	border: 1px solid red
+
+.modal-dialog__form	div.invalid
+	bottom: 30px
+
+div.invalid
+	font-size: 16px
+	width: 100%	
+	color: red
+	position: absolute
+	bottom: 15px	
+	left: 0
+	text-align: center	
 
 @media(max-width: 1200px)
 	.container
@@ -25,10 +58,14 @@ img
 		width: 90%
 		max-width: 580px	
 	.line_break768
-		display: inline			
+		display: inline
+	.line_break-off	
+		display: none				
 @media(max-width: 576px)				
 	.container
 		width: 320px		
+	div.invalid
+		font-size: 12px		
 
 .button
 	border-radius: 10px
@@ -51,14 +88,11 @@ img
 	&-subtitle
 		display: block
 		font-size: 16px		
-.input
-	border: 1px solid $border-input
+.input	
 	padding: 22px 22px
 	font-size: 15px
 	border-radius: 10px
-	&:focus
-		outline: none
-		border-color: orange
+
 
 
 .button-up

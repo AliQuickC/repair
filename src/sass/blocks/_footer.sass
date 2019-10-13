@@ -1,0 +1,76 @@
+.footer
+	position: relative
+	color: #000000
+.map
+	position: absolute
+	top: 0
+	left: 0
+	width: 50%
+	height: 100%
+
+.contacts
+	flex-basis: 50%
+	padding-top: 69px
+	padding-bottom: 110px
+	padding-left: 210px
+	&-title
+		+bold
+		font-size: 22px
+		line-height: 33px
+		margin-bottom: 95px
+		margin-left: 3px
+	&-block
+		display: flex
+		justify-content: flex-end
+	&-list
+		padding: 0
+		list-style: none
+		&__icon
+			width: 20px
+			height: 20px
+			text-align: center
+			line-height: 20px
+			margin-right: 23px
+		&__item
+			display: flex
+			align-items: flex-start
+			&:nth-child(1)
+				margin-bottom: 36px
+			&:nth-child(2)
+				margin-bottom: 34px			
+			&:nth-child(3) .contacts-list__text
+				margin-left: 1px
+		&__text
+			line-height: 26px
+			margin-top: -6px	
+
+@media(max-width: 1200px)			
+	.contacts		
+		padding-left: 50px	
+
+@media(max-width: 768px)		
+	.footer
+		min-height: 1122px
+	.contacts		
+		padding-top: 46px
+		padding-left: 22px
+		&-block
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+		&-title
+			font-size: 18px;
+			line-height: 22px
+			margin-bottom: 37px
+		&-list
+			&__icon
+				margin-right: 12px
+			&__item
+				&:nth-child(2) .contacts-list__text
+					margin-left: 1px				
+				&:nth-child(3) .contacts-list__text
+					margin-left: 2px					
+	.map	
+		top: 457px
+		width: 100%
+		height: 665px

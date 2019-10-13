@@ -1,0 +1,159 @@
+.warranty
+	text-align: center
+	padding-top: 0
+	padding-bottom: 226px
+	&-header
+		background-color: $bg-yellow
+		// padding-top: 60px
+		// padding-bottom: 67px
+		min-height: 280px
+		display: flex
+		justify-content: center
+		align-items: center
+	&-title
+		font-size: 32px;
+		font-weight: 400;
+		line-height: 50px;
+		// min-width: 907px
+		margin-top: 22px
+		span			
+			margin-left: -9px
+
+.advantage
+	display: flex
+	justify-content: space-between
+	padding-top: 100px
+	padding-bottom: 103px
+	&-item
+		max-width: 370px
+		min-width: 370px
+		max-height: 410px		
+		min-height: 410px		
+		&:nth-child(1)
+			background: $bg-advantage url('../img/warranty/advantage1.png') bottom center no-repeat
+			background-size: contain
+		&:nth-child(2)
+			background: $bg-advantage url('../img/warranty/advantage2.png') bottom center no-repeat
+			background-size: contain
+		&:nth-child(3)
+			background: $bg-advantage url('../img/warranty/advantage3.png') bottom center no-repeat			
+			background-size: contain
+		&__text
+			font-size: 16px			
+			line-height: 23px
+			text-align: left
+			padding-left: 26px
+			padding-top: 6px
+		&__bold
+			+bold
+
+.contract
+	&-title
+		+bold
+		font-size: 30px
+		font-weight: 400
+		line-height: 45px
+		margin-bottom: 92px
+	&-item
+		min-width: 300px
+		display: flex
+		flex-direction: column
+		align-items: center		
+		&:nth-child(2)
+			margin-left: 28px
+			margin-right: 28px			
+		&__image
+			max-width: 270px
+			min-width: 270px
+			max-height: 360px
+			min-height: 360px
+			background-color: $secondary
+			margin-bottom: 36px
+			display: flex
+			justify-content: center
+			align-items: center
+		&s
+			display: flex
+			justify-content: space-around
+		&__text
+			font-size: 18px
+			line-height: 24px
+
+@media(max-width: 1200px)
+	.advantage
+		padding-top: 59px
+		flex-direction: column
+		align-items: center
+		&-item
+			margin-bottom: 31px
+			// min-width: 272px
+	.warranty
+		padding-bottom: 100px
+		&-title
+			font-size: 24px;
+
+@media(max-width: 992px)
+	.contract
+		&-title			
+			font-size: 22px
+			margin-bottom: 46px
+		&-item			
+			min-width: 270px
+			margin-bottom: 44px
+			&s
+				flex-direction: column
+			&__image
+				margin-bottom: 29px
+			&:nth-child(2)
+				margin-left: 0
+				margin-right: 0
+			&__text
+				font-size: 14px
+				line-height: 17px
+
+@media(max-width: 768px)				
+	.warranty
+		padding-bottom: 43px
+		&-title
+			font-size: 18px
+			line-height: 21px
+			margin-top: 10px
+			span			
+				margin-left: 0
+		&-header
+			min-height: 231px			
+
+	.advantage
+		padding-bottom: 24px
+		&-item
+			min-width: 272px
+			min-height: 300px
+			&:nth-child(2)
+				min-height: 307px
+				min-width: 277px
+				margin-left: -2px
+				margin-bottom: 28px
+				.advantage-item__text
+					padding-left: 25px
+			&:nth-child(3)
+				min-height: 304px
+				min-width: 275px
+				margin-left: -4px				
+			&__text
+				padding-top: 5px
+				font-size: 12px			
+				line-height: 17.05px
+				padding-left: 19px
+		
+	.contract
+		&-title			
+			font-size: 18px			
+			line-height: 22px
+		&-item			
+			&:nth-child(2)
+				margin-bottom: 43px
+				.contract-item__image	
+					margin-bottom: 28px				
+			&:nth-child(3)				
+				.contract-item__image	
+					margin-bottom: 28px

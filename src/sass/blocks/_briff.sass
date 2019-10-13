@@ -1,7 +1,7 @@
 .brif
 	background-image: url('../img/brif/brif-color-bg.png'), url('../img/brif/brif-bg.jpg')
 	background-position: left center, center right
-	background-size: 50%, contain
+	background-size: 50.1%, cover
 	background-repeat: repeat-y, no-repeat
 	&-block
 		display: flex
@@ -9,29 +9,59 @@
 		flex-basis: 50%
 	&__form
 		flex-basis: 50%
-		padding-left: 200px
+		padding-left: 214px
 		text-align: center
+	&__input
+		width: 100%
+		width: 100%
+		max-width: 370px
+		height: 65px
+		margin-bottom: 15px
+	&__button
+		height: 70px
+		width: 100%
+		max-width: 370px
+		margin-top: 15px
+		margin-bottom: 30px
 
-.interview
-	padding-right: 70px
+
+.interview	
 	&__title
-		margin-bottom: 50px
+		margin-top: 9px
+		margin-bottom: 44px
 		font-size: 22px
 		+bold
+		line-height: 33px
 	&__subtitle
 		display: block
-		margin-bottom: 95px
+		margin-bottom: 92px
 		font-size: 16px
+		margin-left: 2px
 	&-list
 		list-style: none
+		padding-left: 1px
 		&__item
 			display: flex
 			align-items: center
-			margin-bottom: 25px
+			margin-bottom: 24px
 			+bold
-		&__counter
-			display: inline-block
-			margin-right: 30px
+			&:nth-child(1)
+				margin-bottom: 26px
+				.interview-list__text
+					margin-top: -2px
+			&:nth-child(2)
+				margin-bottom: 18px
+			&:nth-child(3)
+				margin-bottom: 32px
+				.interview-list__text
+					margin-top: 15px
+					line-height: 22px
+
+		&__counter			
+			display: flex
+			justify-content: center
+			align-items: center	
+			margin-right: 32px
 			text-align: center
 			line-height: 35px
 			font-size: 14px
@@ -40,4 +70,126 @@
 			border: 2px solid $text-color
 			border-radius: 50%
 		&__text
+			font-size: 18px
 			max-width: 400px
+			letter-spacing: -0.2px
+
+.form
+	&__title
+		margin-top: 5px
+		margin-bottom: 45px
+		letter-spacing: -1.05px
+		margin-left: 2px
+		font-size: 24px
+		+bold
+		line-height: 33px
+	&__subtitle
+		display: block
+		margin-bottom: 50px
+		font-size: 16px		
+	&__description
+		display: block
+		text-align: center
+		letter-spacing: -0.5px
+
+
+@media(max-width: 1200px)		
+	.brif
+		&__form
+			padding-left: 30px
+	.interview
+		padding-right: 15px	
+		padding-left: 15px
+		&__title
+			font-size: 20px
+			margin-bottom: 15px
+		&__subtitle
+			margin-bottom: 30px
+		&-list
+			&__text	
+				font-style: 14px
+				max-width: 200px
+			&__counter
+				margin-right: 20px
+	.form
+		&__title
+			font-size: 20px
+			margin-bottom: 15px
+		&__subtitle
+			margin-bottom: 30px
+
+
+@media(max-width: 768px)			
+	.brif
+		background-image: url('../img/brif/brif-color-bg.png'), url('../img/brif/brif-bg.jpg')
+		background-position: top center, center bottom		
+		background-repeat: repeat-x, no-repeat
+		background-size: 100% 44.7%, cover
+		padding-top: 33px
+		padding-bottom: 30px
+		&-block
+			flex-direction: column
+		&__form
+			margin-top: 94px
+			padding-left: 0
+			padding-right: 0
+		&__input
+			max-width: 275px
+			margin-bottom: 8px
+		&__button
+			max-width: 275px
+			margin-top: 0
+			margin-bottom: 25px
+			font-size: 14px
+	.interview								
+		padding-left: 21px		
+		&__title			
+			line-height: 22px
+			letter-spacing: -1.11px
+			margin-bottom: 13px
+		&__subtitle
+			max-width: 180px
+			letter-spacing: -1px
+			line-height: 16px
+			margin-bottom: 38px
+		&-list				
+			&__counter
+				margin-right: 10px
+				padding-left: 3px
+			
+			&__text
+				font-size: 14px
+				max-width: 240px
+			&__item
+				margin-left: -2px
+				&:nth-child(1)
+					margin-bottom: 22px
+					.interview-list__text
+						margin-top: 2px
+				&:nth-child(2)				
+					margin-bottom: 19px					
+					.interview-list__text
+						margin-top: 10px
+				&:nth-child(3)				
+					margin-bottom: 24px					
+					.interview-list__text
+						line-height: 16px
+						margin-top: 2px						
+	.form		
+		&__title					
+			line-height: 24px					
+			margin-left: -3px
+			margin-bottom: 24px
+			letter-spacing: -1.1px
+			span
+				display: inline-block
+				margin-left: 5px
+		&__subtitle
+			letter-spacing: -1.1px
+			margin-bottom: 33px
+		&__description
+			max-width: 140px
+			line-height: 24px	
+			letter-spacing: -1.1px
+			margin: auto
+			transform: translateX(-4px);
