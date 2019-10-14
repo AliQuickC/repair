@@ -66,10 +66,6 @@ img {
   width: 100%;
 }
 
-.input.invalid {
-  border: 1px solid red;
-}
-
 .modal-dialog__form div.invalid {
   bottom: 30px;
 }
