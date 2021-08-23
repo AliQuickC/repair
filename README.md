@@ -1,2 +1,3 @@
-# AliQuickC.github.io/repair/src
+# Deploy: https://aliquickc.github.io/repair/src/
+
 Сайт для компании "Ремонт квартир"
